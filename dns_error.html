@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>s.whatsapp.net - DNS Error</title>
+    <link rel="icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACgAAAev/aY2enNcAAAAASUVORK5CYII=">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #fff;
+            color: #212121;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .error-container {
+            max-width: 600px;
+            text-align: left;
+            margin-top: 40px;
+        }
+        
+        .error-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 1.75em;
+            font-weight: normal;
+            margin-bottom: 16px;
+            color: #202124;
+        }
+        
+        .url {
+            color: #5f6368;
+            font-size: 0.9em;
+            margin-bottom: 24px;
+            word-break: break-all;
+        }
+        
+        .error-message {
+            font-size: 0.95em;
+            margin-bottom: 24px;
+            color: #5f6368;
+        }
+        
+        .error-code {
+            font-size: 0.8em;
+            color: #5f6368;
+            margin-bottom: 32px;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+        
+        button {
+            background-color: #f8f9fa;
+            border: 1px solid #dadce0;
+            color: #3c4043;
+            padding: 10px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        
+        button:hover {
+            background-color: #f1f3f4;
+        }
+        
+        .help-link {
+            color: #1a73e8;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .help-link:hover {
+            text-decoration: underline;
+        }
+        
+        .browser-ui {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .window-controls {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .window-control {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .close { background-color: #ff5f57; }
+        .minimize { background-color: #ffbd2e; }
+        .maximize { background-color: #28ca42; }
+        
+        .address-bar {
+            flex: 1;
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 6px 12px;
+            font-size: 14px;
+            color: #5f6368;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .lock-icon {
+            color: #5f6368;
+            font-size: 14px;
+        }
+        
+        .domain {
+            color: #202124;
+        }
+        
+        .browser-menu {
+            display: flex;
+            gap: 16px;
+            color: #5f6368;
+            font-size: 14px;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #202124;
+                color: #e8eaed;
+            }
+            
+            h1 {
+                color: #e8eaed;
+            }
+            
+            .url, .error-message, .error-code {
+                color: #9aa0a6;
+            }
+            
+            button {
+                background-color: #303134;
+                border-color: #5f6368;
+                color: #e8eaed;
+            }
+            
+            button:hover {
+                background-color: #3c4043;
+            }
+            
+            .browser-ui {
+                background-color: #303134;
+                border-color: #5f6368;
+            }
+            
+            .address-bar {
+                background-color: #202124;
+                border-color: #5f6368;
+                color: #9aa0a6;
+            }
+            
+            .domain {
+                color: #e8eaed;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Error Content -->
+    <div class="error-container">
+        <svg class="error-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-2h2v2h-2zm0-10v6h2V7h-2z" fill="#70757A"/>
+        </svg>
+        
+        <h1>This site can't be reached</h1>
+        <div class="url">s.whatsapp.net's DNS address could not be found.</div>
+        <div class="error-message">Diagnosing the problem.</div>
+        <div class="error-code">DNS_PROBE_POSSIBLE</div>
+        
+        <div class="buttons">
+            <button id="reloadButton">Reload</button>
+            <button id="detailsButton">Details</button>
+        </div>
+        
+        <a href="#" class="help-link">Search Google for s whatsapp net</a>
+    </div>
+
+    <script>
+        // Add functionality to buttons
+        document.getElementById('reloadButton').addEventListener('click', function() {
+            window.location.reload();
+        });
+        
+        document.getElementById('detailsButton').addEventListener('click', function() {
+            alert('DNS_PROBE_POSSIBLE means your browser could not find the DNS record for s.whatsapp.net. This could be due to network connectivity issues, DNS server problems, or the domain not existing.');
+        });
+        
+        // Auto-detect system theme
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add('dark-theme');
+        }
+        
+        // Update theme if system preference changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (e.matches) {
+                document.body.classList.add('dark-theme');
+            } else {
+                document.body.classList.remove('dark-theme');
+            }
+        });
+    </script>
+</body>
+  </html>
